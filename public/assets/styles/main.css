@@ -1,0 +1,244 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #edf3fc;
+  font-family: "Assistant", sans-serif;
+}
+
+@media (max-width: 400px) {
+  .img-home .img-people {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-home {
+    left: 20px !important;
+    max-width: 100vh !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    left: -2000px !important;
+  }
+  .img-home {
+    height: auto !important;
+    margin-bottom: 20px !important;
+  }
+  .img-home .img-people {
+    max-width: 40vh !important;
+  }
+  .section-smartrt h1 {
+    margin: 20px 0px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-home {
+    position: relative !important;
+    top: -200px !important;
+    left: 370px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-home {
+    position: relative !important;
+    top: 50px !important;
+    left: -20px !important;
+  }
+  .img-home .img-people {
+    max-width: 60vh !important;
+  }
+  .section-smartrt h1 {
+    margin-top: 100px !important;
+  }
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.btn-navbar-right {
+  margin-right: -10px !important;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  height: 40px;
+}
+
+.btn-login {
+  background-color: #3c80bd;
+  color: #fff;
+  font-family: "Assistant", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.btn-login .btn-login:hover {
+  background-color: #3c80bd;
+  color: #fff;
+}
+
+.text-center h1 {
+  margin-top: 90px !important;
+  font-family: "Montserrat", sans-serif;
+  color: #707070;
+}
+
+.text-center p {
+  font-family: "Assistant", sans-serif;
+  font-weight: lighter;
+}
+
+.text-center .btn-get-started {
+  background-color: #3c80bd;
+  color: #fff;
+}
+
+.travel {
+  margin-top: 100px !important;
+}
+
+.active-cyan-4 input[type="text"]:focus:not([readonly]) {
+  border: 1px solid #4dd0e1;
+  -webkit-box-shadow: 0 0 0 1px #4dd0e1;
+          box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+.active-cyan-3 input[type="text"] {
+  border: 1px solid #4dd0e1;
+  -webkit-box-shadow: 0 0 0 1px #4dd0e1;
+          box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+.section-popular-content .section-popular-travel .card-travel {
+  min-height: 380px;
+  background: #fff;
+  color: #fff;
+  padding: 30px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.section-popular-content .section-popular-travel .card-travel .travel-country {
+  font-size: 18px;
+  color: #fff;
+}
+
+.section-popular-content .section-popular-travel .card-travel .travel-location {
+  font-size: 26px;
+  color: #fff;
+}
+
+.section-popular-content .section-popular-travel .card-travel .travel-button .btn-travel-details {
+  background-color: #3c80bd;
+  color: #fff;
+}
+
+.section-popular-content .section-popular-travel .card-travel .travel-button .btn-travel-details:hover {
+  color: #fff;
+}
+
+.section-details-content {
+  margin-top: 10px !important;
+  min-height: 100vh;
+}
+
+.section-details-content .row-wisata {
+  margin-top: 20px !important;
+}
+
+.section-details-content .card-details {
+  margin-left: 10px;
+  padding: 30px;
+  border-radius: 11px;
+}
+
+.section-details-content .card-details .trip-informations th {
+  font-weight: 300;
+  font-size: 18px;
+  color: #3c80bd;
+}
+
+.section-details-content .card-details .trip-informations td {
+  font-weight: 300;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details .gallery .img-details {
+  width: 100%;
+  height: auto;
+}
+
+.section-details-content .card-right {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.section-details-content .join-container {
+  margin-top: -16px;
+  margin-left: 10px !important;
+}
+
+.section-details-content .btn-join-now {
+  background-color: #3c80bd;
+  color: #fff;
+  border-radius: 0;
+}
+
+.section-details-content .btn-join-now:hover {
+  color: #fff;
+}
+
+.section-details-content .btn-add-now {
+  background-color: #3c80bd;
+  color: #fff;
+}
+
+.section-details-content .btn-add-now:hover {
+  color: #fff;
+}
+
+.section-details-content .input-group-text {
+  background-color: transparent;
+}
+
+.section-details-content h3 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #071c4d;
+}
+
+.section-details-content .gj-datepicker .input-group-append .btn {
+  padding: 0px;
+  border-left: #fff;
+  background-color: #fff;
+}
+
+.section-details-content .gj-datepicker .input-group-append .btn img {
+  width: 30px;
+  height: auto;
+  right: 1000px;
+}
+
+.btn-home-page {
+  background-color: #3c80bd;
+  color: #fff;
+}
+
+.btn-home-page:hover {
+  background-color: #3c80bd;
+}
+/*# sourceMappingURL=main.css.map */
