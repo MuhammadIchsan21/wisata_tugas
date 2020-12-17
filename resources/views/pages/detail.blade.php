@@ -51,7 +51,7 @@
 </div>
 @endsection
 @push('addon-script')
-<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap">
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2C8vk7iaIGmDNt-TfJDQ_mdcyc7VbtTE&callback=myMap">
 </script>
 <script>
     function myMap() {
