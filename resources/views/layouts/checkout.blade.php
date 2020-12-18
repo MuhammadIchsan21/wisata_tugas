@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     @include('includes.style')
     @stack('addon-style')
+    @stack('prepend-style')
 </head>
 
 <body>
@@ -20,6 +21,7 @@
     @include('includes.footer')
     @include('includes.script')
     @stack('addon-script')
+    @stack('prepend-script')
 </body>
 
 </html>
