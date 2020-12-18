@@ -26,7 +26,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <img src="assets/images/ansel.jpg" alt="" height="60" />
+                                            <img src="{{url('assets/images/ansel.jpg')}}" alt="" height="60" />
                                         </td>
                                         <td class="align-middle">Ansel</td>
                                         <td class="align-middle">ID</td>
@@ -34,13 +34,13 @@
                                         <td class="align-middle">Active</td>
                                         <td class="align-middle">
                                             <a href="#">
-                                                <img src="assets/images/ic_remove.png" alt="" />
+                                                <img src="{{url('assets/images/ic_remove.png')}}" alt="" />
                                             </a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="assets/images/aku.jpg" alt="" height="60" />
+                                            <img src="{{url('assets/images/aku.jpg')}}" alt="" height="60" />
                                         </td>
                                         <td class="align-middle">Ichsan</td>
                                         <td class="align-middle">ID</td>
@@ -48,7 +48,7 @@
                                         <td class="align-middle">Active</td>
                                         <td class="align-middle">
                                             <a href="#">
-                                                <img src="assets/images/ic_remove.png" alt="" />
+                                                <img src="{{url('assets/images/ic_remove.png')}}" alt="" />
                                             </a>
                                         </td>
                                     </tr>
@@ -121,7 +121,7 @@
                         </p>
                         <div class="bank">
                             <div class="bank-item pb-3">
-                                <img src="assets/images/ic_bank.png" alt="" class="bank-image" />
+                                <img src="{{url('assets/images/ic_bank.png')}}" alt="" class="bank-image" />
                                 <div class="description">
                                     <h3>PT ID</h3>
                                     <p>
@@ -133,7 +133,7 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="bank-item">
-                                <img src="assets/images/ic_bank.png" alt="" class="bank-image" />
+                                <img src="{{url('assets/images/ic_bank.png')}}" alt="" class="bank-image" />
                                 <div class="description">
                                     <h3>PT ID</h3>
                                     <p>
@@ -147,10 +147,11 @@
                         </div>
                     </div>
                     <div class="join-container">
-                        <a href="success.html" class="btn btn-block btn-join-now mt-3 py-2">I Have Made Payment</a>
+                        <a href="{{route('success')}}" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
+                            Payment</a>
                     </div>
                     <div class="text-center mt-3">
-                        <a href="#" class="text-muted">Cancel Booking</a>
+                        <a href="{{route('detail')}}" class="text-muted">Cancel Booking</a>
                     </div>
                 </div>
             </div>
@@ -159,16 +160,16 @@
 </main>
 @endsection
 @push('prepend-style')
-<link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css" />
+<link rel="stylesheet" href="{{url('assets/libraries/gijgo/css/gijgo.min.css')}}" />
 @endpush
 @push('prepend-script')
-<script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+<script src="{{url('assets/libraries/gijgo/js/gijgo.min.js')}}"></script>
 <script>
     $(document).ready(function () {
 				$(".datepicker").datepicker({
                 uiLibrary: "bootstrap4",
                 icons: {
-                rightIcon: '<img src="assets/images/ic_date.png" alt="" />'
+                rightIcon: '<img src="{{url('assets/images/ic_date.png')}}" alt="" />'
                 }
                 });
     });

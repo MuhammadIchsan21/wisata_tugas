@@ -19,6 +19,9 @@ Route::get('/detail', 'DetailController@index')
         ->name('detail');
 Route::get('/checkout', 'CheckoutController@index')
         ->name('checkout');
+Route::get('/success', 'SuccessController@index')
+        ->name('success');
+
 
 
 Route::prefix('admin')
