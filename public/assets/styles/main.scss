@@ -67,6 +67,17 @@ body {
         }
     }
 }
+@media (max-width: 991px) {
+    .section-details-content {
+        .row-wisata {
+            .col-lg-4 {
+                .card-right {
+                    margin-top: 100px !important;
+                }
+            }
+        }
+    }
+}
 //Navbar
 .navbar-brand {
     img {

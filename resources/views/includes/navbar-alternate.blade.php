@@ -1,8 +1,8 @@
 <div class="container">
     <nav class="row navbar navbar-expand-lg navbar-light navbar-responsive">
         <div class="navbar-nav ml-auto mr-auto mr-sm-auto mr-lg-0 mr-md-auto">
-            <a class="navbar-brand" href="index.html">
-                <img src="{{url('assets/images/Rt30.png')}}" alt="" />
+            <a class="navbar-brand" href="{{route('home')}}">
+                <img src="{{url('/assets/images/SmartRT-Resize.png')}}" alt="" />
             </a>
         </div>
         <ul class="navbar-nav mr-auto d-none d-lg-block">

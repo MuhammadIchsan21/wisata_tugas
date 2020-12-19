@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="row navbar navbar-expand-lg navbar-light navbar-responsive">
-        <a href="#" class="navbar-brand">
-            <img src="/assets/images/Rt30.png" alt="Logo" />
+        <a href="{{route('home')}}" class="navbar-brand">
+            <img src="{{url('/assets/images/SmartRT-Resize.png')}}" alt="Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navb" aria-controls="navb"
             aria-expanded="false" aria-label="Toggle navigation">
