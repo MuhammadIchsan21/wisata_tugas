@@ -14,7 +14,7 @@
                     <div class="gallery">
                         <div class="xzoom-container">
                             <img src="{{url('assets/images/duduk.jpg')}}" class="xzoom" id="xzoom-default"
-                                xoriginal="{{url('assets/images/duudk.jpg')}}" />
+                                xoriginal="{{url('assets/images/duduk.jpg')}}" />
                         </div>
                         <div class="xzoom-thumbs">
                             <a href="{{url('assets/images/duduk.jpg')}}">

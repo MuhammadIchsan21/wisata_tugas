@@ -180,14 +180,17 @@ body {
             }
         }
         .gallery {
-            .img-details {
-                width: 100%;
-                height: auto;
-            }
+            width: 100% !important;
             .xzoom-container {
+                display: block;
                 .xzoom {
+                    width: 100% !important;
                     box-shadow: none;
                     margin-bottom: 10px;
+                }
+                .xactive {
+                    border: 2px solid black;
+                    box-shadow: none;
                 }
             }
         }
