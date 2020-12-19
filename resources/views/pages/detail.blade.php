@@ -12,10 +12,27 @@
                     <h1>Samboja</h1>
                     <p>Republic of Indonesia Raya</p>
                     <div class="gallery">
-                        <img src="/assets/images/tes.jpg" alt="" class="img-responsive img-details" />
-                        <h2>Tentang Wisata</h2>
-                        <p>bali adalah bagus</p>
+                        <div class="xzoom-container">
+                            <img src="{{url('assets/images/duduk.jpg')}}" class="xzoom" id="xzoom-default"
+                                xoriginal="{{url('assets/images/duudk.jpg')}}" />
+                        </div>
+                        <div class="xzoom-thumbs">
+                            <a href="{{url('assets/images/duduk.jpg')}}">
+                                <img src="{{url('assets/images/duduk.jpg')}}" class="xzoom-gallery" width="128"
+                                    xpreview="{{url('assets/images/duduk.jpg')}}" />
+                            </a>
+                            <a href="{{url('assets/images/ansel.jpg')}}">
+                                <img src="{{url('assets/images/ansel.jpg')}}" class="xzoom-gallery" width="128"
+                                    xpreview="{{url('assets/images/ansel.jpg')}}" />
+                            </a>
+                            <a href="{{url('assets/images/tidur.jpg')}}">
+                                <img src="{{url('assets/images/tidur.jpg')}}" class="xzoom-gallery" width="128"
+                                    xpreview="{{url('assets/images/tidur.jpg')}}" />
+                            </a>
+                        </div>
                     </div>
+                    <h2>Tentang Wisata</h2>
+                    <p>bali adalah bagus</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -50,10 +67,21 @@
     </div>
 </div>
 @endsection
+@push('addon-style')
+<link rel="stylesheet" href="{{url('assets/libraries/xzoom/xzoom.css')}}" />
+@endpush
 @push('addon-script')
-<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap">
-</script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+<script src="{{url('assets/libraries/xzoom/xzoom.min.js')}}"></script>
 <script>
+    $(document).ready(function () {
+    $(".xzoom, .xzoom-gallery").xzoom({
+    zoomWidth: 500,
+    title: false,
+    tint: "#333",
+    Xoffset: 15,
+    });
+    });
     function myMap() {
     				var mapProp = {
     					center: new google.maps.LatLng(-1.2741896679237057, 116.85689054782411),
@@ -63,6 +91,6 @@
     					document.getElementById("googleMap"),
     					mapProp
     				);
-    			}
+                }
 </script>
 @endpush

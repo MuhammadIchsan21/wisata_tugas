@@ -181,6 +181,12 @@ body {
   height: auto;
 }
 
+.section-details-content .card-details .gallery .xzoom-container .xzoom {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+}
+
 .section-details-content .card-right {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
