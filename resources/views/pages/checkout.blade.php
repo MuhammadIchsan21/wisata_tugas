@@ -147,7 +147,7 @@
                         </div>
                     </div>
                     <div class="join-container">
-                        <a href="{{route('success')}}" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
+                        <a href="{{route('checkout-success')}}" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
                             Payment</a>
                     </div>
                     <div class="text-center mt-3">

@@ -20,13 +20,16 @@ Route::get('/detail', 'DetailController@index')
 Route::get('/checkout', 'CheckoutController@index')
         ->name('checkout');
 Route::get('/success', 'SuccessController@index')
-        ->name('success');
+        ->name('checkout-success');
 
 
 
 Route::prefix('admin')
         ->namespace('admin')//file folder controller/admin
+        ->middleware(['auth', 'admin'])//auth & admin ada di file kernel.php
         ->group(function () {
             Route::get('/', 'DashboardController@index')
             ->name('dashboard');
         });
+
+Auth::routes(['verify' => true]);
