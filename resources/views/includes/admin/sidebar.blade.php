@@ -3,7 +3,7 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('dashboard')}}">
-        <div class="sidebar-brand-text mx-3">Admin</div>
+        <div class="sidebar-brand-text mx-3">Ichsan</div>
     </a>
 
     <!-- Divider -->
@@ -32,6 +32,12 @@
         <a class="nav-link" href="{{route('transaction.index')}}">
             <i class="fas fa-fw fa-dollar-sign"></i>
             <span>Transaksi</span></a>
+    </li>
+
+    <li class="nav-item ">
+        <a class="nav-link" href="{{route('kategori.index')}}">
+            <i class="fas fa-fw fa fa-tags"></i>
+            <span>Kategori</span></a>
     </li>
 
     <!-- Divider -->

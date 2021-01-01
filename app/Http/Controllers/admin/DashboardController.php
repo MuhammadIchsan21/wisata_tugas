@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Kategori;
 use App\Transaction;
 use App\TravelPackage;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class DashboardController extends Controller
             'travel_package' => TravelPackage::count(),
             'transaction' => Transaction::count(),
             'transaction_pending' => Transaction::where('transaction_status', 'PENDING')->count(),
-            'transaction_success' => Transaction::where('transaction_status', 'SUCCESS')->count()
+            'transaction_success' => Transaction::where('transaction_status', 'SUCCESS')->count(),
+            'kategori' => Kategori::count()
         ]);
     }
 }

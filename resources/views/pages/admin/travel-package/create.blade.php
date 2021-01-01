@@ -17,7 +17,7 @@
             @endforeach
         </ul>
     </div>
-
+    @endif
 
     <div class="card shadow">
         <div class="card-body">
@@ -54,14 +54,19 @@
                     <label for="price">Price</label>
                     <input type="number" name="price" placeholder="Price" class="form-control" value="{{old('price')}}">
                 </div>
+                <div class="form-group">
+                    <label for="lat">Latitude</label>
+                    <input type="text" name="lat" placeholder="Latitude" class="form-control" value="{{old('lat')}}">
+                </div>
+                <div class="form-group">
+                    <label for="long">Longtitude</label>
+                    <input type="text" name="long" placeholder="Longtitude" class="form-control"
+                        value="{{old('long')}}">
+                </div>
                 <button type="submit" class="btn btn-primary btn-block">Simpan</button>
             </form>
         </div>
     </div>
-
-
-
-
 </div>
 <!-- /.container-fluid -->
 @endsection

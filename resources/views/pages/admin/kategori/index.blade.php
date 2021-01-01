@@ -1,13 +1,12 @@
 @extends('layouts.admin')
-
 @section('content')
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Paket Travel</h1>
-        <a href="{{route('travel-package.create')}}" class="btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Paket Travel
+        <h1 class="h3 mb-0 text-gray-800">Kategori</h1>
+        <a href="{{route('kategori.create')}}" class="btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Kategori
         </a>
     </div>
 
@@ -17,14 +16,9 @@
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <td>id</td>
-                            <td>title</td>
+                            <td>No</td>
                             <td>location</td>
-                            <td>type</td>
-                            <td>departure date</td>
-                            <td>type</td>
-                            <td>Latitude</td>
-                            <td>Longtitude</td>
+                            <td>icon</td>
                             <td>Action</td>
                         </tr>
                     </thead>
@@ -32,19 +26,15 @@
                         @forelse ($items as $item)
                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->title}}</td>
-                            <td>{{$item->location}}</td>
-                            <td>{{$item->type}}</td>
-                            <td>{{$item->departure_date}}</td>
-                            <td>{{$item->type}}</td>
-                            <td>{{$item->lat}}</td>
-                            <td>{{$item->long}}</td>
+                            <td>{{$item->travel_package->location}}</td>
                             <td>
-                                <a href="{{route('travel-package.edit', $item->id)}}" class="btn btn-info">
+                                <img src="{{Storage::url($item->icon)}}">
+                            </td>
+                            <td>
+                                <a href="{{route('kategori.edit', $item->id)}}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form action="{{route('travel-package.destroy', $item->id)}}" method="POST"
-                                    class="d-inline">
+                                <form action="{{route('kategori.destroy', $item->id)}}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger">

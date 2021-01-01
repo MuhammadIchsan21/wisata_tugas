@@ -12,7 +12,8 @@ class TravelPackage extends Model
     protected $fillable = [
         'title', 'slug', 'location', 'about',
         'departure_date', 'duration' ,'type',
-        'price','deleted_at','created_at','updated_at'
+        'price','lat','long',
+        'deleted_at','created_at','updated_at'
     ];
 
     protected $hidden = [
@@ -22,5 +23,9 @@ class TravelPackage extends Model
     public function galleries()
     {
         return $this->hasMany(Gallery::class, 'travel_packages_id', 'id');
+    }
+    public function kategories()
+    {
+        return $this->hasMany(Kategori::class, 'travel_packages_id', 'id');
     }
 }

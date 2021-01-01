@@ -56,6 +56,15 @@
                     <label for="price">Price</label>
                     <input type="number" name="price" placeholder="Price" class="form-control" value="{{$item->price}}">
                 </div>
+                <div class="form-group">
+                    <label for="lat">Latitude</label>
+                    <input type="text" name="lat" placeholder="Latitude" class="form-control" value="{{$item->lat}}">
+                </div>
+                <div class="form-group">
+                    <label for="long">Longtitude</label>
+                    <input type="number" name="long" placeholder="Longtitude" class="form-control"
+                        value="{{$item->long}}">
+                </div>
                 <button type="submit" class="btn btn-primary btn-block">Ubah</button>
             </form>
         </div>

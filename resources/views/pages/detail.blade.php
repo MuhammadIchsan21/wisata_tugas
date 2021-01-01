@@ -5,7 +5,9 @@
 @section('content')
 <div class="container">
     <div class="section-details-content">
-        <div id="googleMap" style="width: 100%; height: 400px"></div>
+        <div id="map" style="width: 100%; height: 400px">
+
+        </div>
         <div class="row row-wisata">
             <div class="col-lg-8 pl-lg-0">
                 <div class="card card-details">
@@ -58,7 +60,8 @@
                 </div>
                 <div class="join-container">
                     @auth
-                    <form action="" method="post">
+                    <form action="{{route('checkout_process', $item->id)}}" method="post">
+                        @csrf
                         <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
                             Join Now
                         </button>
@@ -77,7 +80,8 @@
 <link rel="stylesheet" href="{{url('assets/libraries/xzoom/xzoom.css')}}" />
 @endpush
 @push('addon-script')
-<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2C8vk7iaIGmDNt-TfJDQ_mdcyc7VbtTE&callback=myMap">
+</script>
 <script src="{{url('assets/libraries/xzoom/xzoom.min.js')}}"></script>
 <script>
     $(document).ready(function () {
@@ -88,15 +92,61 @@
     Xoffset: 15,
     });
     });
-    function myMap() {
-    				var mapProp = {
-    					center: new google.maps.LatLng(-1.2741896679237057, 116.85689054782411),
-    					zoom: 13
-    				};
-    				var map = new google.maps.Map(
-    					document.getElementById("googleMap"),
-    					mapProp
-    				);
-                }
+    // function myMap() {
+    // var mapProp = {
+    // center: new google.maps.LatLng(-1.2741896679237057, 116.85689054782411),
+    // zoom: 13
+    // };
+    // }
+
+    // let lat = {$item->travel_packages->lat};
+    // let long = {$item->travel_packages->long};
+    // let icon = {$item->kategories->icon};
+
+    // let map = new google.maps.Map(
+    // document.getElementById("googleMap"),{
+    // center:{
+    // lat:lat,
+    // long:long
+    // },
+    // zoom:15
+    // });
+
+    // let marker = new google.maps.Marker({
+    // position:{
+    // lat:lat,
+    // long:long,
+    // icon:icon
+    // },
+    // map:map
+    // });
 </script>
+<script type='text/javascript'
+    src='https://maps.google.com/maps/api/js?language=en&key=AIzaSyB2C8vk7iaIGmDNt-TfJDQ_mdcyc7VbtTE&libraries=places&region=GB'>
+</script>
+<script defer>
+    function initialize() {
+		var mapOptions = {
+			zoom: 15,
+			minZoom: 6,
+			maxZoom: 17,
+			zoomControl:true,
+			zoomControlOptions: {
+  				style:google.maps.ZoomControlStyle.DEFAULT
+			},
+			center: new google.maps.LatLng({{ $item->lat}}, {{ $item->long }}),
+            icon: 'new google.maps.Marker({{Storage::url($items->icon)}})',
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false,
+			panControl:false,
+			mapTypeControl:false,
+			scaleControl:false,
+			overviewMapControl:false,
+			rotateControl:false
+	  	}
+		var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 @endpush

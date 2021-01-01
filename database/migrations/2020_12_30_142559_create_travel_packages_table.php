@@ -23,6 +23,8 @@ class CreateTravelPackagesTable extends Migration
             $table->string('duration');
             $table->string('type');
             $table->integer('price');
+            $table->string('lat')->nullable();
+            $table->string('long')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
